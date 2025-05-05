@@ -3,7 +3,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const express = require("express");
+const cors = require("cors");
 const app = express();
+app.use(cors());
 const expressLayouts = require("express-ejs-layouts");
 
 const indexRouter = require("./routes/index");
